@@ -1,14 +1,17 @@
-all : hello fibonacci number
+all : hello euler1 euler2 euler3 
 
 clean : 
 	rm *.exe
 
 
-hello : HelloWorld.cpp
+hello : hello.cpp
 	g++ $^ -o $@.exe
 
-fibonacci : fibonacci.cpp
+euler1 : euler1.cpp
 	g++ $^ -o $@.exe
 
-number : number.cpp
+euler2 : euler2.cpp
+	g++ $^ -o $@.exe
+
+euler3 : euler3.cpp
 	g++ $^ -o $@.exe
