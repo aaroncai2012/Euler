@@ -29,14 +29,14 @@ int main() {
 	std::cin >> num;
 	
 	while ((factor * factor) <= num) {
-		if((num % nextPrime(factor)) == 0) {
-			answer = nextPrime(factor);
-			factor = nextPrime(factor);
+		unsigned long next = nextPrime(factor);
+		if((num % next) == 0) {
+			answer = next;
+			factor = next;
 		}
-		else{factor = nextPrime(factor);}
+		else{factor = next;}
 	}
 
-	std::cout << std::endl << "The greatest prime factor of that number is: " << answer; 
-	std:: cout << std::endl << "The next prime number is: " << nextPrime(num);
+	std::cout << std::endl << "The greatest prime factor of " << num << " is: " << answer << std::endl; 
 	return 0;
 }
